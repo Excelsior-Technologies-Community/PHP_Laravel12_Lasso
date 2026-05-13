@@ -4,68 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lasso Demo Test Page</title>
+    <title>Laravel Lasso Pro</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-        /* Full screen dark mode */
         body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #121212;
-            /* Dark background */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #ffffff;
+            background: linear-gradient(135deg, #0f172a, #111827);
         }
 
-        /* Center card */
-        .card {
-            text-align: center;
-            padding: 50px 70px;
-            border-radius: 20px;
-            background: linear-gradient(135deg, #1f1f1f, #2c2c3c);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: #00ffcc;
-            /* Neon green heading */
-        }
-
-        p {
-            font-size: 1.2rem;
-            color: #bbbbbb;
-        }
-
-        /* Optional hover button */
-        .button {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 25px;
-            background-color: #00ffcc;
-            color: #121212;
-            font-weight: bold;
-            border-radius: 10px;
-            text-decoration: none;
-            transition: 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #00d1a8;
-            transform: translateY(-3px);
+        .glass {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(12px);
         }
     </style>
 </head>
 
-<body>
+<body class="min-h-screen flex items-center justify-center text-white">
 
-    <div class="card">
-        <h1>Lasso Laravel 12 Project 🚀</h1>
-        <p>This is a test page for your Laravel 12 Lasso project</p>
+    <div class="glass p-10 rounded-3xl shadow-2xl text-center w-[90%] md:w-[600px]">
+
+        <h1 class="text-5xl font-bold text-cyan-400 mb-5">
+            Laravel 12 Lasso 🚀
+        </h1>
+
+        <p class="text-gray-300 text-lg mb-8">
+            Premium Asset Deployment Management Dashboard
+        </p>
+
+        <div class="flex justify-center gap-5 flex-wrap">
+
+            <a href="/dashboard"
+                class="bg-cyan-400 text-black px-6 py-3 rounded-xl font-bold hover:scale-105 transition">
+                Dashboard
+            </a>
+
+            <a href="/asset-status"
+                class="bg-purple-500 px-6 py-3 rounded-xl font-bold hover:scale-105 transition">
+                Asset Status
+            </a>
+
+        </div>
 
     </div>
 
