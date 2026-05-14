@@ -1,4 +1,5 @@
 <?php
+// app/Models/BuildHistory.php
 
 namespace App\Models;
 
@@ -10,6 +11,13 @@ class BuildHistory extends Model
         'version',
         'asset_count',
         'status',
-        'published_at'
+        'published_at',
+        'environment',
+        'deployed_by',
+        'notes'
+    ];
+
+    protected $casts = [
+        'published_at' => 'datetime',
     ];
 }
