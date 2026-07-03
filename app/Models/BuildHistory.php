@@ -1,5 +1,4 @@
 <?php
-// app/Models/BuildHistory.php
 
 namespace App\Models;
 
@@ -14,10 +13,24 @@ class BuildHistory extends Model
         'published_at',
         'environment',
         'deployed_by',
-        'notes'
+        'notes',
+        'is_active',
+        'build_log',
+        'backup_path'
     ];
 
     protected $casts = [
         'published_at' => 'datetime',
+        'is_active' => 'boolean',
     ];
+
+    public function logs()
+    {
+        return $this->hasMany(BuildLog::class);
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
+    }
 }
